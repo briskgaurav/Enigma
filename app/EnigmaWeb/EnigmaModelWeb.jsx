@@ -179,10 +179,9 @@ export default function EnigmaModelWeb({
       },
       "<+1"
     );
-   
   }, []);
 
-  useGSAP(()=>{
+  useGSAP(() => {
     const scrollTriggerTimeline2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".thirdSection",
@@ -196,10 +195,10 @@ export default function EnigmaModelWeb({
     scrollTriggerTimeline2.to(planeRef.current.position, {
       y: 10,
       duration: 10,
-      delay:10,
+      delay: 10,
       ease: "linear",
     });
-  })
+  });
 
   const materialsProps = useControls({
     thickness: { value: 1.35, min: 0, max: 10, step: 0.05 },
@@ -210,7 +209,10 @@ export default function EnigmaModelWeb({
     backside: { value: false },
   });
 
-  const normals = useTexture("/drei/SurfaceImperfections003_1K_Normal.jpg");
+  const normalMap = useTexture("/maps/Material_normal.png");
+  const ormMap = useTexture("/maps/Material_occlusionRoughnessMetallic.png");
+  normalMap.wrapS = normalMap.wrapT = THREE.RepeatWrapping;
+  normalMap.anisotropy = 16;
 
   return (
     <group position={[0, -3.5, 0]}>
@@ -331,9 +333,7 @@ export default function EnigmaModelWeb({
           rotation={[degToRad(100), 0, 0]}
         >
           <planeGeometry args={[3, 1.5]} />
-          <MeshTransmissionMaterial
-           {...materialsProps}
-          />
+          <MeshTransmissionMaterial {...materialsProps} />
         </mesh>
       </group>
     </group>
