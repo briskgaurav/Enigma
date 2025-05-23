@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
 import EnigmaModelWeb from "./EnigmaModelWeb";
 import * as THREE from "three";
-import gsap from "gsap";
 
 export default function Enigma({ modelMesh }) {
   return (
