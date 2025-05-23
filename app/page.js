@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger);
 function page() {
   const [onHold, setOnHold] = useState(false);
   const [isholding, setIsholding] = useState(false);
-  const [holdProgress, setHoldProgress] = useState(0);
+  const [holdProgress, setHoldProgress] = useState(0) ;
   const cursorRef = useRef(null);
 
   // useEffect(() => {
