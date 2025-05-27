@@ -1,3 +1,4 @@
+import { ReactLenis } from "lenis/react";
 
 export const metadata = {
   title: 'Enigma 3D logo',
@@ -6,8 +7,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ReactLenis root>
+
     <html lang="en">
       <body>{children}</body>
     </html>
+    </ReactLenis>
   )
 }

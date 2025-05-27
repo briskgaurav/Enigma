@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
       </nav>
       <div className="w-full h-[90%] flex items-center justify-between">
-        <div className="w-[65%] flex justify-end py-20 px-20 flex-col h-[90%] ">
+        <div className="w-full flex justify-end py-20 px-20 flex-col h-[90%] ">
           <h1 className="text-white text-[8vw] leading-none font-medium">
             Digital
           </h1>
