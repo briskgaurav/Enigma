@@ -15,13 +15,14 @@ import Testimonials from "./EnigmaWeb/Testimonials";
 import Testimonials2 from "./EnigmaWeb/Testimonials2";
 import Solutions from "./EnigmaWeb/Solutions";
 import Fog3D from "./EnigmaWeb/Fog3D";
+import BackgroundPractice from "./EnigmaWeb/BackgroundPractice";
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
   return (
     <>
-      {/* <div className="relative ">
-        <div className="w-screen h-screen top-0 left-0 fixed">
+      <div className="relative ">
+        {/* <div className="w-screen h-screen top-0 left-0 fixed">
           <Enigma />
         </div>
 
@@ -32,9 +33,10 @@ function page() {
           <PortfolioSection />
           <Testimonials />
           <Testimonials2 />
-        </div>
-      </div> */}
-      <Fog3D />
+        </div> */}
+        <BackgroundPractice />
+      </div>
+      {/* <Fog3D /> */}
     </>
   );
 }
